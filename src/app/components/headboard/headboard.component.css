@@ -1,0 +1,26 @@
+section {
+    padding-left: 35%;
+    background: rgb(17, 89, 223);
+    max-width: 100%;
+    margin-left: -13%;
+    margin-right: -10%;
+    margin-bottom: 5%;
+    margin-top: 1%;
+}
+
+p {
+    color: white;
+    margin-top: 0px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 1%;
+    padding-bottom: 0%;
+}
+
+h3 {
+    margin-top: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
