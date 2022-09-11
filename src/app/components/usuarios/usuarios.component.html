@@ -1,5 +1,17 @@
 <div class="container">
     <h2>Usuarios</h2>
+
+    <div class="input-group mb-3">
+      <input 
+        type="text" class="form-control" 
+        placeholder="Ingrese en nombre del usuario a buscar" 
+        aria-label="Ingrese en nombre del usuario a buscar" 
+        aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary search" type="button">Buscar</button>
+      </div>
+    </div>
+
     <table class="table table-bordered">
         <thead class="thead-dark">
           <tr>
@@ -14,22 +26,24 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>Juan</td>
+            <td>Perez</td>
+            <td>Chito</td>
+            <td>Calle 15</td>
+            <td>3482554488</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+            <td>Mirta</td>
+            <td>Legrand</td>
+            <td>Ramirez</td>
+            <td>Calle 17</td>
+            <td>3482110033</td>
           </tr>
         </tbody>
       </table>
+
+      <button type="button" class="btn btn-primary btn-lg action">Nuevo</button>
+      <button type="button" class="btn btn-primary btn-lg action">Editar</button>
+      <button type="button" class="btn btn-primary btn-lg action">Borrar</button>
 </div>

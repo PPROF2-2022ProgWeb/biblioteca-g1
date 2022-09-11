@@ -1,21 +1,19 @@
 h2 {
-    margin: 5%;
+    margin-bottom: 5%;
 }
 
 section {
     padding-left: 20%;
     line-height: 5px;
     padding-top: 0px;
-    margin-left: 5px;
+    margin-left: 5%;
 }
 
 p {
-    margin: 5%;
     line-height: 20px;
 }
 
 ul {
-    margin: 5%;
     line-height: 20px;
 }
 
