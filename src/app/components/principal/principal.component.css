@@ -1,3 +1,7 @@
+h2 {
+    margin: 5%;
+}
+
 section {
     padding-left: 20%;
     line-height: 5px;
@@ -5,25 +9,21 @@ section {
     margin-left: 5px;
 }
 
-h4 {
-    padding-bottom: 1px;
-}
-
-br {
-    margin-top: 20px;
-}
-
 p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 35px;
-    margin-top: 5%;
-    padding-top: 10px;
+    margin: 5%;
+    line-height: 20px;
 }
+
+ul {
+    margin: 5%;
+    line-height: 20px;
+}
+
 
 img {
     clear: both;
     float: right;
     height: 321px;
     width: 444px;
-    margin-right: 33%;
+    margin-right: 10%;
 }
