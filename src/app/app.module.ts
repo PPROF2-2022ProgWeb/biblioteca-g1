@@ -22,6 +22,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HeadboardComponent } from './components/headboard/headboard.component';
 import { PreheaderComponent } from './components/preheader/preheader.component';
 import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.component';
+import { SubirnuevolibroComponent } from './components/subirnuevolibro/subirnuevolibro.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.co
     UsuariosComponent,
     HeadboardComponent,
     PreheaderComponent,
-    NuevousuarioComponent
+    NuevousuarioComponent,
+    SubirnuevolibroComponent
   ],
 
   imports: [

@@ -8,6 +8,7 @@ import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.co
 import { PrestamosComponent } from './components/prestamos/prestamos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
+import { SubirnuevolibroComponent } from './components/subirnuevolibro/subirnuevolibro.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const APP_ROUTES: Routes = [
@@ -20,6 +21,7 @@ const APP_ROUTES: Routes = [
   {path: 'reportes', component: ReportesComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'nuevo-usuario', component: NuevousuarioComponent},
+  {path: 'nuevo-libro', component: SubirnuevolibroComponent},
   {path: '**', pathMatch:'full', redirectTo:'principal'}
 ];
 
