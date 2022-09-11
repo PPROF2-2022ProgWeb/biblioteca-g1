@@ -1,1 +1,54 @@
-<p>libros works!</p>
+<div class="container">
+    <h2>Libros</h2>
+
+    <div class="input-group mb-3">
+      <input 
+        type="text" class="form-control" 
+        placeholder="Ingrese el Id del libro a buscar" 
+        aria-label="Ingrese el Id del libro a buscar" 
+        aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary search" type="button">Buscar</button>
+      </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Edición</th>
+            <th scope="col">Idioma</th>
+            <th scope="col">Páginas</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Ejemplar</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Disponible</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Historias de Guerra</td>
+            <td>5/9/1990</td>
+            <td>Petro Aguilera</td>
+            <td>Acción</td>
+            <td>3</td>
+            <td>Español</td>
+            <td>250</td>
+            <td>Historias sobre las guerras mundiales</td>
+            <td>5</td>
+            <td>2
+            <td>Si</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-primary btn-lg action">Nuevo</button>
+      <button type="button" class="btn btn-primary btn-lg action">Editar</button>
+      <button type="button" class="btn btn-primary btn-lg action">Borrar</button>
+</div>
+

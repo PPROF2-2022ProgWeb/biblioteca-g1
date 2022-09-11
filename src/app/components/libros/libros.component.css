@@ -1,29 +1,19 @@
-section {
+h2 {
+    margin-bottom: 5%;
+}
+.container {
     padding-left: 20%;
-    line-height: 5px;
     padding-top: 0px;
-    margin-left: 5px;
+    margin-left: 2%;
 }
 
-h4 {
-    padding-bottom: 1px;
+.search {
+    margin-left: 7%;   
 }
 
-br {
-    margin-top: 20px;
-}
-
-p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 35px;
-    margin-top: 5%;
-    padding-top: 10px;
-}
-
-img {
-    clear: both;
+.action {
+    margin-left: 3%;
     float: right;
-    height: 321px;
-    width: 444px;
-    margin-right: 33%;
+    margin-top: 10%;
+    margin-bottom: 2%;
 }

@@ -2,7 +2,7 @@ p {
     float: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
-    margin-bottom: 5px;
+    margin: 5%;
     color: #fff;
     align-content: center;
     border-width: 150px;
@@ -61,5 +61,6 @@ i {
 }
 
 nav ul li:hover {
-    background: rgb(17, 89, 223);
+    background: rgb(4, 4, 172);   
+    border-radius: 25px;
 }
