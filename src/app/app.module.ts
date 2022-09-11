@@ -21,6 +21,7 @@ import { ReportesComponent } from './components/reportes/reportes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HeadboardComponent } from './components/headboard/headboard.component';
 import { PreheaderComponent } from './components/preheader/preheader.component';
+import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PreheaderComponent } from './components/preheader/preheader.component';
     ReportesComponent,
     UsuariosComponent,
     HeadboardComponent,
-    PreheaderComponent
+    PreheaderComponent,
+    NuevousuarioComponent
   ],
 
   imports: [

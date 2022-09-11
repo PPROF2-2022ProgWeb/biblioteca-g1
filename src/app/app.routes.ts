@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DevolucionesComponent } from './components/devoluciones/devoluciones.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LibrosComponent } from './components/libros/libros.component';
+import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.component';
 import { PrestamosComponent } from './components/prestamos/prestamos.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
@@ -18,6 +19,7 @@ const APP_ROUTES: Routes = [
   {path: 'principal', component: PrincipalComponent},
   {path: 'reportes', component: ReportesComponent},
   {path: 'usuarios', component: UsuariosComponent},
+  {path: 'nuevo-usuario', component: NuevousuarioComponent},
   {path: '**', pathMatch:'full', redirectTo:'principal'}
 ];
 

@@ -5,8 +5,7 @@
       <input 
         type="text" class="form-control" 
         placeholder="Ingrese en nombre del usuario a buscar" 
-        aria-label="Ingrese en nombre del usuario a buscar" 
-        aria-describedby="basic-addon2">
+        >
       <div class="input-group-append">
         <button class="btn btn-outline-primary search" type="button">Buscar</button>
       </div>
@@ -43,7 +42,7 @@
         </tbody>
       </table>
 
-      <button type="button" class="btn btn-primary btn-lg action">Nuevo</button>
+      <button type="button" class="btn btn-primary btn-lg action" [routerLink]="['/nuevo-usuario']">Nuevo</button>
       <button type="button" class="btn btn-primary btn-lg action">Editar</button>
       <button type="button" class="btn btn-primary btn-lg action">Borrar</button>
 </div>
