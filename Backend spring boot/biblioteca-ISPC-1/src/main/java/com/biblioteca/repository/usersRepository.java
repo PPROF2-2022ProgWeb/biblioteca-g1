@@ -1,8 +1,9 @@
 package com.biblioteca.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.biblioteca.model.users;
+import com.biblioteca.model.Users;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
-public interface usersRepository extends JpaRepository<users, Long>{
-	List<users> findByName(String name);
+@Repository
+public interface UsersRepository extends JpaRepository<Users, Long>{
 }

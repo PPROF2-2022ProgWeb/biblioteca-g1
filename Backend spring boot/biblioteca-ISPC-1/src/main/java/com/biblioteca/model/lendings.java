@@ -16,7 +16,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class lendings {
+public class Lendings {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;

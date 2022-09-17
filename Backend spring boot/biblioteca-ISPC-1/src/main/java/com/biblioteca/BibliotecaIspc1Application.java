@@ -8,7 +8,6 @@ public class BibliotecaIspc1Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BibliotecaIspc1Application.class, args);
-		System.out.println("Hollo word");
 	}
 
 }

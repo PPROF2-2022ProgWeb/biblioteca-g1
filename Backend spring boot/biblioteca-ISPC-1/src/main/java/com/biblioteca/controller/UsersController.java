@@ -17,31 +17,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.biblioteca.model.users;
-import com.biblioteca.repository.usersRepository;
+import com.biblioteca.model.Users;
+import com.biblioteca.service.UserService;
 
 @CrossOrigin(origins = "http://localhost:3306")
 @RestController
 @RequestMapping("/api")
-public class usersService {
+public class UsersController {
 	
 	@Autowired
-	  usersRepository usersRepository;
-
-	  @GetMapping("/users")
-	  public ResponseEntity<List<users>> getAllTutorials(@RequestParam(required = false) String title) {
-	    try {
-	      List<users> users = new ArrayList<users>();
-	      
-	      usersRepository.findAll().forEach(users::add);
-
-	      if (users.isEmpty()) {
-	        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-	      }
-
-	      return new ResponseEntity<>(users, HttpStatus.OK);
-	    } catch (Exception e) {
-	      return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-	    }
-}
+	private UserService usersService;
+	
+	// Get all 
+    @GetMapping("/users")
+    public List<Users> fetchUserList()
+    {
+        return usersService.fetchUserList();
+    }
+    
+    // Create
+    @PostMapping("/user")
+    public Users saveUser(@RequestBody Users user)
+    {
+        return usersService.saveUser(user);
+    }
+    
+    // Update
+    @PutMapping("/user/{id}")
+    public Users updateUser(
+    		@RequestBody Users user,
+            @PathVariable("id") Long id)
+    {
+        return usersService.updateUser(user, id);
+    }
+ 
+    // Delete
+    @DeleteMapping("/user/{id}")
+    public String deleteUserById(@PathVariable("id") Long id)
+    {
+    	usersService.deleteUsertById(id);
+        return "Deleted Successfully";
+    }
 }
