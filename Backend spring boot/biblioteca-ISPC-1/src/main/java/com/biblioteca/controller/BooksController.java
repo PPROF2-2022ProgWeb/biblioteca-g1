@@ -1,4 +1,5 @@
 package com.biblioteca.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,49 +13,49 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.biblioteca.model.Users;
-import com.biblioteca.service.UserService;
+import com.biblioteca.model.Books;
+import com.biblioteca.service.BookService;
 
 @CrossOrigin(origins = "http://localhost:3306")
 @RestController
 @RequestMapping("/api")
-public class UsersController {
-	
+public class BooksController {
 	@Autowired
-	private UserService usersService;
+	private BookService booksService;
 	
 	// Get all 
-    @GetMapping("/users")
-    public List<Users> fetchUserList()
+    @GetMapping("/books")
+    public List<Books> fetchBookList()
     {
-        return usersService.fetchUserList();
+        return booksService.fetchBookList();
     }
     
     // Create
-    @PostMapping("/user")
-    public Users saveUser(@RequestBody Users user)
+    @PostMapping("/book")
+    public Books saveBook(@RequestBody Books book)
     {
-        return usersService.saveUser(user);
+        return booksService.saveBook(book);
     }
     
     // Update
-    @PatchMapping("/user/{id}")
-    public Users updateUser(
-    		@RequestBody Users user,
+    @PatchMapping("/book/{id}")
+    public Books updateBook(
+    		@RequestBody Books book,
             @PathVariable("id") Long id)
     {
-        return usersService.updateUser(user, id);
+        return booksService.updateBook(book, id);
     }
  
     // Delete
-    @DeleteMapping("/user/{id}")
-    public String deleteUserById(@PathVariable("id") Long id)
+    @DeleteMapping("/book/{id}")
+    public String deleteBookById(@PathVariable("id") Long id)
     {
     	try {
-    	usersService.deleteUsertById(id);
+    	booksService.deleteBookById(id);
         return "Deleted Successfully";
     	}catch(Exception e){
     		return "ERROR: No deleted";
     	}
     }
+
 }

@@ -1,0 +1,86 @@
+Usuarios (tabla Users):
+- Get all (GET): devuelve todos los usuarios 
+Endpoint -> http://localhost:8080/api/users
+
+- Create (POST): crea un usuario
+Endpoint -> http://localhost:8080/api/user
+Body -> json con los campos a crear
+Ejemplo: 
+{
+    "name": "Juana",
+    "last_name_p": "Legrand",
+    "last_name_m": "Cuchito",
+    "domicilio": "calle 15",
+    "tel": "3482449966",
+    "sanctions": 2,
+    "sanc_money": 300
+}
+
+- Update (PUT): modifica el usuario con el id seleccionado
+Endpoint -> http://localhost:8080/api/user/1
+Param -> id de usuario a modificar
+Body -> json con los campos a modificar
+
+- Delete (DELETE): elimina el usuario con el id seleccionado
+Param -> id de usuario a modificar
+Endpoint -> http://localhost:8080/api/user/2
+
+------------------------------------------------------------
+Libros (tabla Books):
+- Get all (GET): devuelve todos los libros
+Endpoint -> http://localhost:8080/api/books
+
+- Create (POST): crea un libro
+Endpoint -> http://localhost:8080/api/book
+Body -> json con los campos a crear
+Ejemplo: 
+{
+    "author": "Isabel Allende",
+    "available": 5,
+    "category": "Romance",
+    "date": "15/5/2019",
+    "description": "libro de gauchos",
+    "edit": "2019",
+    "lang": "xxxxx",
+    "stock": 25,
+    "title": "Artemio Furia"
+}
+
+- Update (PUT): modifica el libro con el id seleccionado
+Endpoint -> http://localhost:8080/api/book/1
+Param -> id de libro a modificar
+Body -> json con los campos a modificar
+
+- Delete (DELETE): elimina el libro con el id seleccionado
+Param -> id de libro a modificar
+Endpoint -> http://localhost:8080/api/book/2
+
+------------------------------------------------------------ ver que endpoints van (update o create)
+Prestamos (tabla Lendings):    
+- Get all (GET): devuelve todos los prestamos (botón actualizar, ventana prestamos)
+Endpoint -> 
+debe listar id de usuario, id de libro, fecha de salida (fecha de creación) y de entrega
+
+- Nuevo prestamo (POST): crea el prestamo (ventana Nuevo préstamo)
+create en tabla prestamos -> debe ingresar id de usuario e id de libro
+fecha de entrega null
+se crea la fecha de cración automáticamente, tipo Date
+
+- Update (PUT): modifica el prestamo con el id seleccionado (ventana devolución de libro)
+Endpoint -> 
+Param -> id de prestamo a modificar
+Body -> json con los campos a modificar
+modificar campo fecha de entrega que al iniciar es null
+ingresar id libro, id usuario
+
+
+------------------------------------------------------------ ver que endpoints van
+Busquedas:
+Libros: por id del libro
+Usuario: por nombre del usuario
+
+
+
+
+
+

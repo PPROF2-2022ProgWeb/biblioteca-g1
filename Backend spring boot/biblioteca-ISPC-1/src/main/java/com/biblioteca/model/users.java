@@ -108,9 +108,6 @@ public class Users {
 
 	public void setSanc_money(Integer sanc_money) {
 		this.sanc_money = sanc_money;
-	}
-	
-	
-	
+	}	
 	
 }

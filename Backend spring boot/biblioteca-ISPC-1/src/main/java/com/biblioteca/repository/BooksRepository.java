@@ -1,8 +1,10 @@
 package com.biblioteca.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.biblioteca.model.Users;
+
+import com.biblioteca.model.Books;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsersRepository extends JpaRepository<Users, Long>{
+public interface BooksRepository extends JpaRepository<Books, Long>{
+
 }
