@@ -50,10 +50,10 @@ public class Books {
 
 		
 		//Relations
-		/*@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+		@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 		//@MapsId("id")
 		@JoinColumn(name = "lend_id")
-	    private List<Lendings> lendings;*/
+	    private List<Lendings> lendings;
 		
 		
 }

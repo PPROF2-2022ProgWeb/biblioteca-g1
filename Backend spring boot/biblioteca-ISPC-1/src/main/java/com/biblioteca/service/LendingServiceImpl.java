@@ -2,19 +2,25 @@ package com.biblioteca.service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.biblioteca.model.Books;
 import com.biblioteca.model.Lendings;
+import com.biblioteca.model.Users;
+import com.biblioteca.repository.BooksRepository;
 import com.biblioteca.repository.LendingsRepository;
+import com.biblioteca.repository.UsersRepository;
 
 
 @Service
 public class LendingServiceImpl implements LendingService{
 	@Autowired
     private LendingsRepository lendingsRepository;
+	private UsersRepository userRepository;
+	private BooksRepository bookRepository;
  
 	// Get all
     @Override 
@@ -24,9 +30,25 @@ public class LendingServiceImpl implements LendingService{
     }
     
     // Create
+    /*@Override
+    public Lendings saveLending(Lendings lending)
+    {
+    	System.out.println(userRepository.findById(lending.getUsers().getId()));
+    	Lendings lend = new Lendings();
+    	lend.setDate_out(lending.getDate_out());
+    	lend.setDate_return(lending.getDate_return());
+    	lend.setUsers(userRepository.findById(lending.getUsers().getId()).get());
+    	lend.setBooks(bookRepository.findById(lending.getBooks().getId()).get());
+    	System.out.println(lend);
+    	
+        return lendingsRepository.save(lend);
+    }*/
+    
+    // Create
     @Override
     public Lendings saveLending(Lendings lending)
     {
+    
         return lendingsRepository.save(lending);
     }
     

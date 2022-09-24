@@ -24,6 +24,7 @@ public class Lendings {
 	@Column(name = "date_return", nullable = true)
 	private String date_return;
 	
+	//Deberian eliminarse
 	@Column(name = "books_id", nullable = true)
 	private String books_id;
 	
@@ -32,7 +33,7 @@ public class Lendings {
 	
 	
 	//Relations
-	/*@ManyToOne()
+	@ManyToOne()
 	//@MapsId("id")
     @JoinColumn(name = "user_id")
     private Users users;
@@ -40,5 +41,5 @@ public class Lendings {
 	@ManyToOne()
 	//@MapsId("id")
     @JoinColumn(name = "book_id")
-    private Books books;*/
+    private Books books;
 }
