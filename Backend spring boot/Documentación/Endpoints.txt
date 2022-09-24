@@ -82,7 +82,7 @@ ingresar id libro, id usuario
 ------------------------------------------------------------ ver que endpoints van
 Busquedas:
 Libros: por id del libro
-Usuario: por nombre del usuario
+Usuario: por nombre del usuario -> Endpoint: http://localhost:8080/api/users/juana
 
 
 

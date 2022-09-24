@@ -57,4 +57,11 @@ public class UsersController {
     		return "ERROR: No deleted";
     	}
     }
+    
+    // Search by name 
+    @GetMapping("/users/{name}")
+    public List<Users> searchByName(@PathVariable("name") String name)
+    {
+        return usersService.searchByName(name);
+    }
 }

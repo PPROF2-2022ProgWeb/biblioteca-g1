@@ -3,6 +3,7 @@ package com.biblioteca.service;
 import java.util.List;
 
 import com.biblioteca.model.Lendings;
+import com.biblioteca.model.Users;
 
 public interface LendingService {
 	// Get all
@@ -16,6 +17,4 @@ public interface LendingService {
  
     // Delete
     void deleteLendingById(Long id);
-
-
 }

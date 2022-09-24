@@ -14,5 +14,8 @@ public interface UserService {
  
     // Delete
     void deleteUsertById(Long id);
+    
+    //Search by name
+    List<Users> searchByName(String name);
 
 }
