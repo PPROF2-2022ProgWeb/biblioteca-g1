@@ -13,9 +13,6 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@ToString
 public class Lendings {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +21,24 @@ public class Lendings {
 	@Column(name = "date_out")
 	private String date_out;
 	
-	@Column(name = "date_return")
+	@Column(name = "date_return", nullable = true)
 	private String date_return;
 	
+	@Column(name = "books_id", nullable = true)
+	private String books_id;
+	
+	@Column(name = "users_id", nullable = true)
+	private String users_id;
+	
+	
+	//Relations
+	/*@ManyToOne()
+	//@MapsId("id")
+    @JoinColumn(name = "user_id")
+    private Users users;
+
+	@ManyToOne()
+	//@MapsId("id")
+    @JoinColumn(name = "book_id")
+    private Books books;*/
 }

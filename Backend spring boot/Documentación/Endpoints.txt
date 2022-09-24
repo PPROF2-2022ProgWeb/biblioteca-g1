@@ -55,19 +55,24 @@ Body -> json con los campos a modificar
 Param -> id de libro a modificar
 Endpoint -> http://localhost:8080/api/book/2
 
------------------------------------------------------------- ver que endpoints van (update o create)
-Prestamos (tabla Lendings):    
+------------------------------------------------------------ (ver como hacerlo con relaciones)
+Prestamos (tabla Lendings): 
+Relación:
+- 1 usuario muchos prestamos
+- 1 libro muchos prestamos
+   
 - Get all (GET): devuelve todos los prestamos (botón actualizar, ventana prestamos)
-Endpoint -> 
+Endpoint -> http://localhost:8080/api/lending
 debe listar id de usuario, id de libro, fecha de salida (fecha de creación) y de entrega
 
 - Nuevo prestamo (POST): crea el prestamo (ventana Nuevo préstamo)
+Endpoint -> http://localhost:8080/api/lending
 create en tabla prestamos -> debe ingresar id de usuario e id de libro
 fecha de entrega null
 se crea la fecha de cración automáticamente, tipo Date
 
 - Update (PUT): modifica el prestamo con el id seleccionado (ventana devolución de libro)
-Endpoint -> 
+Endpoint -> http://localhost:8080/api/lending/1
 Param -> id de prestamo a modificar
 Body -> json con los campos a modificar
 modificar campo fecha de entrega que al iniciar es null
@@ -78,6 +83,7 @@ ingresar id libro, id usuario
 Busquedas:
 Libros: por id del libro
 Usuario: por nombre del usuario
+
 
 
 
