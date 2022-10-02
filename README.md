@@ -12,6 +12,8 @@
 - Backend spring boot: aplicación web
 - biblioteca: frontend de la aplicación web realizado en Angular.
 
+## Consignas: 
+
 PROYECTO GESTIÓN BIBLIOTECA
 
 Llegó una solicitud a la Consultora ISPC para renovar un sistema de gestión de libros para la "Biblioteca Popular Los Lectores".
@@ -34,7 +36,7 @@ PARA EL BACKEND
 PARA EL FRONTEND
 Convertir el entorno gráfico de escritorio en Aplicación Web (queda a libre elección la estética/identidad institucional de la aplicación) empleando los recursos ya aprendidos:-
 
-• HTML
-• CSS /Bootstrap (a elección)
-• JAVASCRIPT (opcional)
-• ANGULAR (Módulos / Componentes y conexión mediante servicios)
+- HTML
+- CSS /Bootstrap (a elección)
+- JAVASCRIPT (opcional)
+- ANGULAR (Módulos / Componentes y conexión mediante servicios)
