@@ -1,11 +1,11 @@
 # biblioteca-g1
 
-## Alumnos: 
--Binaghi, María Gimena
--Bordarampe, Jorge
--Moyano, Diego
--Leiva, Marcelo
--Martino, Gastón
+# # Alumnos: 
+- Binaghi, María Gimena
+- Bordarampe, Jorge
+- Moyano, Diego
+- Leiva, Marcelo
+- Martino, Gastón
 
 PROYECTO GESTIÓN BIBLIOTECA
 
