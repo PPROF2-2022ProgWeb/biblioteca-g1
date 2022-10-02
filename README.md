@@ -7,6 +7,11 @@
 - Leiva, Marcelo
 - Martino, Gastón
 
+## Carpetas:
+- Backend Java escritorio: aplicación de escritorio con las modificaciones correspondientes según lo pedido.
+- Backend spring boot: aplicación web
+- biblioteca: frontend de la aplicación web realizado en Angular.
+
 PROYECTO GESTIÓN BIBLIOTECA
 
 Llegó una solicitud a la Consultora ISPC para renovar un sistema de gestión de libros para la "Biblioteca Popular Los Lectores".
