@@ -1,6 +1,6 @@
 # biblioteca-g1
 
-# # Alumnos: 
+## Alumnos: 
 - Binaghi, María Gimena
 - Bordarampe, Jorge
 - Moyano, Diego
