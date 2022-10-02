@@ -1,48 +1,55 @@
 <div class="container">
+  <form >
     <h2>Usuarios</h2>
 
     <div class="input-group mb-3">
-      <input 
-        type="text" class="form-control" 
-        placeholder="Ingrese en nombre del usuario a buscar" 
-        >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ingrese en nombre del usuario a buscar"
+        formControlName="nombreUsuario"
+      />
       <div class="input-group-append">
-        <button class="btn btn-outline-primary search" type="button">Buscar</button>
+        <button class="btn btn-outline-primary search" type="button">
+          Buscar
+        </button>
       </div>
     </div>
 
     <table class="table table-bordered">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido M</th>
-            <th scope="col">Apellido P</th>
-            <th scope="col">Domicilio</th>
-            <th scope="col">Teléfono</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Juan</td>
-            <td>Perez</td>
-            <td>Chito</td>
-            <td>Calle 15</td>
-            <td>3482554488</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Mirta</td>
-            <td>Legrand</td>
-            <td>Ramirez</td>
-            <td>Calle 17</td>
-            <td>3482110033</td>
-          </tr>
-        </tbody>
-      </table>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido M</th>
+          <th scope="col">Apellido P</th>
+          <th scope="col">Domicilio</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Operaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.name}}</td>
+          <td>{{usuario.last_name_m}}</td>
+          <td>{{usuario.last_name_p}}</td>
+          <td>{{usuario.domicilio}}</td>
+          <td>{{usuario.tel}}</td>
+          <td>
+             <button type="button" class="btn btn-primary btn-lg action"  [routerLink]="'/editar-usuario/'+usuario.id">Editar</button>
+             <button type="button" class="btn btn-primary btn-lg action" (click)="eliminarUsuario(usuario.id)">Borrar</button>
+           </td>
+        </tr>
+      </tbody>
+    </table>
 
-      <button type="button" class="btn btn-primary btn-lg action" [routerLink]="['/nuevo-usuario']">Nuevo</button>
-      <button type="button" class="btn btn-primary btn-lg action">Editar</button>
-      <button type="button" class="btn btn-primary btn-lg action">Borrar</button>
+    <button
+      type="button"
+      class="btn btn-primary btn-lg action"
+      [routerLink]="['/nuevo-usuario']"
+    >
+      Nuevo
+    </button>
+  </form>
 </div>

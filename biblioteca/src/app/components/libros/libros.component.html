@@ -25,26 +25,30 @@
             <th scope="col">Descripción</th>
             <th scope="col">Stock</th>
             <th scope="col">Disponible</th>
+            <th scope="col">Operaciones</th>
+            
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Historias de Guerra</td>
-            <td>5/9/1990</td>
-            <td>Petro Aguilera</td>
-            <td>Acción</td>
-            <td>3</td>
-            <td>Español</td>
-            <td>Historias sobre las guerras mundiales</td>
-            <td>5</td>
-            <td>Si</td>
+            <tr *ngFor="let libro of libros">
+              <th scope="row">{{libro.id}}</th>
+              <td>{{libro.title}}</td>
+            <td>{{libro.date}}</td>
+            <td>{{libro.author}}</td>
+            <td>{{libro.category}}</td>
+            <td>{{libro.edit}}</td>
+            <td>{{libro.lang}}</td>
+            <td>{{libro.description}}</td>
+            <td>{{libro.stock}}</td>
+            <td>{{libro.available}}</td>
+            <td>
+              <button type="button" class="btn btn-primary btn-lg action"  [routerLink]="'/editar-libro/'+libro.id">Editar</button>
+              <button type="button" class="btn btn-primary btn-lg action" (click)="eliminarLibro(libro.id)">Borrar</button>
+            </td>
           </tr>
         </tbody>
       </table>
 
       <button type="button" class="btn btn-primary btn-lg action" [routerLink]="['/nuevo-libro']">Nuevo</button>
-      <button type="button" class="btn btn-primary btn-lg action">Editar</button>
-      <button type="button" class="btn btn-primary btn-lg action">Borrar</button>
 </div>
 

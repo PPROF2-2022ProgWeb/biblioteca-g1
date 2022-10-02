@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl
+} from '@angular/forms';
+import { UserModel } from 'src/app/models/user.model';
+import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-nuevousuario',
@@ -7,7 +16,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevousuarioComponent implements OnInit {
 
-  constructor() { }
+  formUsNuevo:FormGroup;
+  user:UserModel;
+
+  constructor(private servicio:UserService ,private formBuilder: FormBuilder) { 
+    this.formUsNuevo=formBuilder.group({
+      id:[0],
+      name:['',Validators.required],
+      last_name_p:['',Validators.required],
+      last_name_m:['',Validators.required],
+      domicilio:['',Validators.required],
+      tel:['',Validators.required],
+    });
+
+  }
+
+
+  onSubmit(){
+    this.guardarUsuario();
+ }
+ guardarUsuario(){
+  if (this.formUsNuevo.valid) {
+  this.servicio.agregarUsuario(this.formUsNuevo.value).subscribe(
+    dato=>{
+      console.log(dato);
+      this.formUsNuevo.reset();
+      Swal.fire('Exito', 'El Usuario se ha registrado exitosamenteng serve', 'success');
+    }
+  )
+  }else{
+    Swal.fire(
+      'Error',
+      'No se puede guardar ya que faltan ingresar datos',
+      'error'
+    );
+    
+  }
+}
 
   ngOnInit(): void {
   }

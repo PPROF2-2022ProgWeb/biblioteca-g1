@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Subir nuevo libro</h2>
+    <h2>Editar libro</h2>
     <form [formGroup]="formLibros" (ngSubmit)="onSubmit()">
     <div class="row">
         <div class="col-6">
@@ -47,7 +47,8 @@
                         <label>Disponibles</label>
                         <input type="text" class="form-control" placeholder="Cantidad a prestar" formControlName="available">
                     </div>
-                    <button type="submit" class="btn btn-primary action">Subir</button>
+                    <br><br>
+                    <button type="submit" class="btn btn-primary action" [disabled]="!formLibros.valid">Editar</button>
                   
         </div>
       

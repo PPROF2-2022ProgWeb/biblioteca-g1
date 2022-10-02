@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "name": "Imperial IPA",
+      "last_name_p": "IPA",
+      "last_name_m": "dfsdf",
+      "domicilio": "dsfdsf",
+      "tel": "123"
+    },
+    {
+      "id": 2,
+      "name": "JORGE ORLANDO",
+      "last_name_p": "ASDASD",
+      "last_name_m": "BORDARAMPE",
+      "domicilio": "ADAD",
+      "tel": "03522650985"
+    },
+    {
+      "id": 3,
+      "name": "JORGE ORLANDO",
+      "last_name_p": "asdas",
+      "last_name_m": "BORDARAMPE",
+      "domicilio": "asasf",
+      "tel": "03522650985"
+    }
+  ]
+}

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DevolucionesComponent } from './components/devoluciones/devoluciones.component';
+import { EditarlibroComponent } from './components/editarlibro/editarlibro.component';
+import { EditarusuarioComponent } from './components/editarusuario/editarusuario.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.component';
@@ -22,6 +24,8 @@ const APP_ROUTES: Routes = [
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'nuevo-usuario', component: NuevousuarioComponent},
   {path: 'nuevo-libro', component: SubirnuevolibroComponent},
+  {path: 'editar-usuario/:id', component: EditarusuarioComponent},
+  {path: 'editar-libro/:id', component: EditarlibroComponent},
   {path: '**', pathMatch:'full', redirectTo:'principal'}
 ];
 

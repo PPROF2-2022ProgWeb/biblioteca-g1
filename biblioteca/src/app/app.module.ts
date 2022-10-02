@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es-AR';
 
@@ -23,6 +22,10 @@ import { HeadboardComponent } from './components/headboard/headboard.component';
 import { PreheaderComponent } from './components/preheader/preheader.component';
 import { NuevousuarioComponent } from './components/nuevousuario/nuevousuario.component';
 import { SubirnuevolibroComponent } from './components/subirnuevolibro/subirnuevolibro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EditarusuarioComponent } from './components/editarusuario/editarusuario.component';
+import { EditarlibroComponent } from './components/editarlibro/editarlibro.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +41,16 @@ import { SubirnuevolibroComponent } from './components/subirnuevolibro/subirnuev
     HeadboardComponent,
     PreheaderComponent,
     NuevousuarioComponent,
-    SubirnuevolibroComponent
+    SubirnuevolibroComponent,
+    EditarusuarioComponent,
+    EditarlibroComponent
   ],
 
   imports: [
     BrowserModule,
-    FormsModule,
-    APP_ROUTING
+    HttpClientModule,
+    APP_ROUTING,
+    ReactiveFormsModule
   ],
   providers: [
     {
