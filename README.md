@@ -1,5 +1,12 @@
 # biblioteca-g1
 
+## Alumnos: 
+-Binaghi, María Gimena
+-Bordarampe, Jorge
+-Moyano, Diego
+-Leiva, Marcelo
+-Martino, Gastón
+
 PROYECTO GESTIÓN BIBLIOTECA
 
 Llegó una solicitud a la Consultora ISPC para renovar un sistema de gestión de libros para la "Biblioteca Popular Los Lectores".
