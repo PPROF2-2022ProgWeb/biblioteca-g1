@@ -8,9 +8,9 @@ public class Connect {
     private static Connection conn;
     private static final String driver = "com.mysql.jdbc.Driver";
     private static final String user = "root";
-    private static final String pass = "123456789";
-    private static final String db = "libreria";
-    private static final String url = "jdbc:mysql://localhost:3306/libreria?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    private static final String pass = "030302";
+    private static final String db = "biblioteca";
+    private static final String url = "jdbc:mysql://localhost:3306/biblioteca?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     
     public Connect(){
         conn = null;
