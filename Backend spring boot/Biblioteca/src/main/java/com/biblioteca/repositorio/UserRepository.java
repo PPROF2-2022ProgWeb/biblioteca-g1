@@ -2,13 +2,15 @@ package com.biblioteca.repositorio;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.biblioteca.modelo.User;
+import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Long>{
 
-	//@Query("SELECT u FROM Users u WHERE u.name LIKE %?1%")
-	//public List<User> findByName(String palabraClave);
+	@Query(value="SELECT * FROM Users WHERE name LIKE %?1%",nativeQuery = true)
+	public List<User> findByNameLike(String palabraClave);
 }

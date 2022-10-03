@@ -1,10 +1,16 @@
 package com.biblioteca.modelo;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -37,8 +43,22 @@ public class User {
 	@Column(name="sanc_money")
 	private Integer sanc_money;
 
+	//@OneToMany(mappedBy="user")
+	//private List<Lending> prestamos;
+	/*
+	@OneToMany(mappedBy="user", fetch=FetchType.EAGER)
+	private Set<Lending> prestamos=new HashSet();
+	*/
 	public User() {}
+/*
+	public List<Lending> getPrestamos() {
+		return prestamos;
+	}
 
+	public void setPrestamos(List<Lending> prestamos) {
+		this.prestamos = prestamos;
+	}
+*/
 	public User(long id, String name, String last_name_p, String last_name_m, String domicilio, String tel,
 			Integer sanctions, Integer sanc_money) {
 		super();

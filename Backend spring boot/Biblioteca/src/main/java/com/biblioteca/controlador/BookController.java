@@ -66,4 +66,9 @@ public class BookController {
 		Book libroActualizado=repositorio.save(b);
 		return ResponseEntity.ok(libroActualizado);
 	}
+	
+	@GetMapping("/booksSearch/{palabraClave}")
+	public List<Book> buscarTodosLosLibros(@PathVariable String palabraClave){
+		return repositorio.findByName(palabraClave);
+	}
 }

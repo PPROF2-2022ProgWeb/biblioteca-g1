@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.biblioteca.excepciones.ResourceNotFoundException;
@@ -30,12 +29,13 @@ public class UserController {
 	public List<User> listarTodosLosUsuarios(){
 		return repositorio.findAll();
 	}
-	/*
-	@GetMapping("/usersname/{palabraClave}")
+
+	
+	@GetMapping("/usersSearch/{palabraClave}")
 	public List<User> listarTodosLosUsuarios(@PathVariable String palabraClave){
-		return repositorio.findByName(palabraClave);
+		return repositorio.findByNameLike(palabraClave);
 	}
-	*/
+	
 
 	
 	@PostMapping("/users")
@@ -64,6 +64,8 @@ public class UserController {
 		User usuarioActualizado=repositorio.save(u);
 		return ResponseEntity.ok(usuarioActualizado);
 	}
+	
+	
 	
     @DeleteMapping("/users/{id}")
     public void EliminarUsuario(@PathVariable Long id){

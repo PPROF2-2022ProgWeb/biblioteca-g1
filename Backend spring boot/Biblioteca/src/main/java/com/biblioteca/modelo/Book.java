@@ -1,9 +1,9 @@
 package com.biblioteca.modelo;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -42,6 +42,12 @@ public class Book {
 	@Column(name="available" , nullable = false)
 	private int available;
 	
+	/*@OneToMany(mappedBy="book", fetch=FetchType.EAGER)
+	private Set<Lending> prestamos=new HashSet();;
+	*/
+	//@OneToMany(mappedBy="book")
+	//private List<Lending> prestamos;
+
 	public Book() {}
 
 	public Book(long id, String title, String date, String author, String category, String edit, String lang,
