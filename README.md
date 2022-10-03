@@ -12,6 +12,9 @@
 - Backend spring boot: aplicación web
 - biblioteca: frontend de la aplicación web realizado en Angular.
 
+## Video explicativo
+Link: https://youtu.be/60xtfmH5dtI
+
 ## Consignas: 
 
 PROYECTO GESTIÓN BIBLIOTECA
