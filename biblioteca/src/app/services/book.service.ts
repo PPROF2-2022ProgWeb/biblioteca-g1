@@ -8,6 +8,7 @@ import { BookModel } from '../models/book.model';
 })
 export class BookService {
   URL='http://localhost:8080/api/books'
+  URLSearch='http://localhost:8080/api/booksSearch'
 
   constructor(private http:HttpClient) { }
 
@@ -17,6 +18,7 @@ export class BookService {
   public eliminarLibro(id:number):Observable<Object>{
     return this.http.delete(`${this.URL}/${id}`); 
   }
+
   public agregarLibro(l:BookModel):Observable<Object>{
     return this.http.post(`${this.URL}`,l); 
   }
@@ -27,4 +29,9 @@ export class BookService {
   public actualizarLibroPorId(id:number, book:BookModel):Observable<Object>{
     return this.http.put(`${this.URL}/${id}`,book); 
   }
+
+  public buscarLibros(title:String):Observable<BookModel[]>{
+    return this.http.get<BookModel[]>(`${this.URLSearch}/${title}`); 
+  }
+
 }

@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   
   URL='http://localhost:8080/api/users'
-  //RL='http://localhost:3000/usuarios'
+  URLSearch='http://localhost:8080/api/usersSearch'
 
   constructor(private http:HttpClient) { }
 
@@ -29,4 +29,9 @@ export class UserService {
   public eliminarUsuario(id:number):Observable<Object>{
     return this.http.delete(`${this.URL}/${id}`); 
   }
+
+  public buscarUsuarios(name:String):Observable<UserModel[]>{
+    return this.http.get<UserModel[]>(`${this.URLSearch}/${name}`); 
+  }
+
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LendingModel } from 'src/app/models/lending.model';
+import { LendingService } from 'src/app/services/lending.service';
 
 @Component({
   selector: 'app-reportes',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportesComponent implements OnInit {
 
-  constructor() { }
+  prestamos:LendingModel[];
+
+  constructor(private servicioL:LendingService) { }
 
   ngOnInit(): void {
+    //this.obtenerReporte();
   }
+
+  obtenerReporte(){
+    this.servicioL.obtenerReporte().subscribe((dato)=>{
+      this.prestamos=dato;
+    }
+      )
+  }
+
 
 }

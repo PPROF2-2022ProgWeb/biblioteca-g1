@@ -1,5 +1,5 @@
 <div class="container">
-  <form >
+  <form [formGroup]="formBusquedaUsuario" (ngSubmit)="obtenerUsuarios()">
     <h2>Usuarios</h2>
 
     <div class="input-group mb-3">
@@ -10,7 +10,7 @@
         formControlName="nombreUsuario"
       />
       <div class="input-group-append">
-        <button class="btn btn-outline-primary search" type="button">
+        <button class="btn btn-outline-primary search" type="button" (click)="obtenerUsuarios()">
           Buscar
         </button>
       </div>

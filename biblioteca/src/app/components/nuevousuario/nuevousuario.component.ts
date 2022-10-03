@@ -41,7 +41,7 @@ export class NuevousuarioComponent implements OnInit {
     dato=>{
       console.log(dato);
       this.formUsNuevo.reset();
-      Swal.fire('Exito', 'El Usuario se ha registrado exitosamenteng serve', 'success');
+      Swal.fire('Exito', 'El Usuario se ha registrado exitosamente', 'success');
     }
   )
   }else{

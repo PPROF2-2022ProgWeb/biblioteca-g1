@@ -1,3 +1,4 @@
+<form [formGroup]="formLibro" (ngSubmit)="obtenerLibros()">
 <div class="container">
     <h2>Libros</h2>
 
@@ -6,9 +7,9 @@
         type="text" class="form-control" 
         placeholder="Ingrese el Id del libro a buscar" 
         aria-label="Ingrese el Id del libro a buscar" 
-        aria-describedby="basic-addon2">
+        aria-describedby="basic-addon2" formControlName="title">
       <div class="input-group-append">
-        <button class="btn btn-outline-primary search" type="button">Buscar</button>
+        <button class="btn btn-outline-primary search" type="button" (click)="obtenerLibros()">Buscar</button>
       </div>
     </div>
 
@@ -51,4 +52,4 @@
 
       <button type="button" class="btn btn-primary btn-lg action" [routerLink]="['/nuevo-libro']">Nuevo</button>
 </div>
-
+</form>
